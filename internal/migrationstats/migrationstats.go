@@ -2,10 +2,9 @@ package migrationstats
 
 import (
 	"fmt"
+	"github.com/woxinyoumeng/goose"
 	"io"
 	"path/filepath"
-
-	"github.com/pressly/goose/v3"
 )
 
 // FileWalker walks all files for GatherStats.
