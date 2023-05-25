@@ -1,20 +1,43 @@
 package cfg
 
-import "os"
+import (
+	"github.com/spf13/viper"
+	"log"
+	"os"
+)
 
 var (
-	GOOSEDRIVER       = envOr("GOOSE_DRIVER", "")
-	GOOSEDBSTRING     = envOr("GOOSE_DBSTRING", "")
-	GOOSEMIGRATIONDIR = envOr("GOOSE_MIGRATION_DIR", DefaultMigrationDir)
-	// https://no-color.org/
-	GOOSENOCOLOR = envOr("NO_COLOR", "false")
+	GOOSEDRIVER       = ""
+	GOOSEDBSTRING     = ""
+	GOOSEMIGRATIONDIR = ""
+	GOOSENOCOLOR      = ""
 )
 
 var (
 	DefaultMigrationDir = "."
 )
 
-// An EnvVar is an environment variable Name=Value.
+func init() {
+	_, err := os.Stat("conf/migrations.yaml")
+	if err != nil {
+		log.Printf(" 读取conf/migrations.yaml配置文件不存在")
+		return
+	}
+	v := viper.New()
+	v.SetConfigFile("conf/migrations.yaml")
+	v.SetConfigType("yaml")
+	err = v.ReadInConfig()
+	if err != nil {
+		log.Printf(" 读取conf/migrations.yaml配置文件错误")
+		return
+	}
+	GOOSEDRIVER = v.GetString("migrations.driver")
+	GOOSEDBSTRING = v.GetString("migrations.url")
+	GOOSEMIGRATIONDIR = v.GetString("migrations.dir")
+	GOOSENOCOLOR = v.GetString("migrations.no_color")
+
+}
+
 type EnvVar struct {
 	Name  string
 	Value string
@@ -27,13 +50,4 @@ func List() []EnvVar {
 		{Name: "GOOSE_MIGRATION_DIR", Value: GOOSEMIGRATIONDIR},
 		{Name: "NO_COLOR", Value: GOOSENOCOLOR},
 	}
-}
-
-// envOr returns os.Getenv(key) if set, or else default.
-func envOr(key, def string) string {
-	val := os.Getenv(key)
-	if val == "" {
-		val = def
-	}
-	return val
 }
