@@ -4,10 +4,10 @@ import (
 	"testing"
 
 	"github.com/pressly/goose/v3"
-	"github.com/pressly/goose/v3/internal/check"
-	"github.com/pressly/goose/v3/internal/testdb"
+	"github.com/woxinyoumeng/gooseinternal/check"
+	"github.com/woxinyoumeng/gooseinternal/testdb"
 
-	_ "github.com/pressly/goose/v3/tests/gomigrations/error/testdata"
+	_ "github.com/woxinyoumeng/goosetests/gomigrations/error/testdata"
 )
 
 func TestGoMigrationByOne(t *testing.T) {

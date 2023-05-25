@@ -4,6 +4,7 @@ import (
 	"errors"
 	"flag"
 	"fmt"
+	"github.com/woxinyoumeng/goose"
 	"io/fs"
 	"log"
 	"os"
@@ -15,10 +16,9 @@ import (
 	"text/tabwriter"
 	"text/template"
 
-	"github.com/pressly/goose/v3"
-	"github.com/pressly/goose/v3/internal/cfg"
-	"github.com/pressly/goose/v3/internal/migrationstats"
-	"github.com/pressly/goose/v3/internal/migrationstats/migrationstatsos"
+	"github.com/woxinyoumeng/gooseinternal/cfg"
+	"github.com/woxinyoumeng/gooseinternal/migrationstats"
+	"github.com/woxinyoumeng/gooseinternal/migrationstats/migrationstatsos"
 )
 
 var (

@@ -11,7 +11,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/pressly/goose/v3/internal/check"
+	"github.com/woxinyoumeng/gooseinternal/check"
 	_ "modernc.org/sqlite"
 )
 

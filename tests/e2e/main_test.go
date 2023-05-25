@@ -12,8 +12,8 @@ import (
 	"testing"
 
 	"github.com/pressly/goose/v3"
-	"github.com/pressly/goose/v3/internal/check"
-	"github.com/pressly/goose/v3/internal/testdb"
+	"github.com/woxinyoumeng/gooseinternal/check"
+	"github.com/woxinyoumeng/gooseinternal/testdb"
 )
 
 const (
