@@ -1,0 +1,5 @@
+migrations:
+  driver: "mysql"
+  url: "user:password@/dbname?parseTime=true"
+  dir: "."
+  no_color: "false"
