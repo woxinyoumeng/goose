@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/woxinyoumeng/gooseinternal/sqlparser"
+	"github.com/woxinyoumeng/goose/internal/sqlparser"
 )
 
 type sqlMigration struct {

@@ -4,7 +4,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/woxinyoumeng/gooseinternal/check"
+	"github.com/woxinyoumeng/goose/internal/check"
 )
 
 func TestParsingGoMigrations(t *testing.T) {

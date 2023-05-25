@@ -4,8 +4,7 @@ import (
 	"database/sql"
 	"testing"
 
-	"github.com/pressly/goose/v3"
-	"github.com/woxinyoumeng/gooseinternal/check"
+	"github.com/woxinyoumeng/goose/internal/check"
 )
 
 func TestNoVersioning(t *testing.T) {

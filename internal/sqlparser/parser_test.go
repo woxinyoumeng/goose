@@ -8,7 +8,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/woxinyoumeng/gooseinternal/check"
+	"github.com/woxinyoumeng/goose/internal/check"
 )
 
 var (

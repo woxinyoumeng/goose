@@ -16,9 +16,9 @@ import (
 	"text/tabwriter"
 	"text/template"
 
-	"github.com/woxinyoumeng/gooseinternal/cfg"
-	"github.com/woxinyoumeng/gooseinternal/migrationstats"
-	"github.com/woxinyoumeng/gooseinternal/migrationstats/migrationstatsos"
+	"github.com/woxinyoumeng/goose/internal/cfg"
+	"github.com/woxinyoumeng/goose/internal/migrationstats"
+	"github.com/woxinyoumeng/goose/internal/migrationstats/migrationstatsos"
 )
 
 var (

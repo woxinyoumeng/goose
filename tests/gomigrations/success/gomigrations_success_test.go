@@ -4,9 +4,8 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/pressly/goose/v3"
-	"github.com/woxinyoumeng/gooseinternal/check"
-	"github.com/woxinyoumeng/gooseinternal/testdb"
+	"github.com/woxinyoumeng/goose/internal/check"
+	"github.com/woxinyoumeng/goose/internal/testdb"
 
 	_ "github.com/woxinyoumeng/goosetests/gomigrations/success/testdata"
 )

@@ -3,7 +3,7 @@ package goose
 import (
 	"fmt"
 
-	"github.com/woxinyoumeng/gooseinternal/dialect"
+	"github.com/woxinyoumeng/goose/internal/dialect"
 )
 
 func init() {

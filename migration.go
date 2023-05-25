@@ -10,7 +10,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/woxinyoumeng/gooseinternal/sqlparser"
+	"github.com/woxinyoumeng/goose/internal/sqlparser"
 )
 
 // MigrationRecord struct.
